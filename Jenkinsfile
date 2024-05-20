@@ -37,7 +37,7 @@ pipeline {
                      //sh 'kubernetesDeploy (configs: "deploymentservice.yaml",kubeconfigId: "k8sconfigpwd")'
                 // kubernetesApply createNewResources: true, deletePodsOnReplicationControllerUpdate: false, ignoreRunningOAuthClients: false, ignoreServices: false, processTemplatesLocally: false, readinessTimeout: 0, rollingUpgradePreserveScale: true, rollingUpgrades: true, servicesOnly: false
                  // sh 'kubectl --kubeconfig=/Users/abhishekkushawaha/.kube get ns development || kubectl --kubeconfig=/Users/abhishekkushawaha/.kube  create ns development")' && sh 'kubectl apply -f deploymentservice.yaml'
-                 sh 'kubectl --kubeconfig=/Users/abhishekkushawaha/.kube apply -f deploymentservice.yaml'
+                 sh ' sudo kubectl --kubeconfig=/Users/abhishekkushawaha/.kube apply -f deploymentservice.yaml'
                 }
                   
 
